@@ -13,13 +13,21 @@ public class main {
 
     while (true) {
 
-      System.out.println("What do you want the length to be?: (Enter a number 1-50)");
-      length = input.nextInt();
-      if (length < 1 || length > 50) {
-        System.out.println("that number is not within the bounds");
+      try {
+        System.out.println("What do you want the length to be?: (Enter a number 1-50)");
+
+        length = input.nextInt();
+
+        if (length < 1 || length > 50) {
+          System.out.println("that number is not within the bounds");
+        }
+        else {
+          break;
+        }
       }
-      else {
-        break;
+      catch (Exception e) {
+        System.out.println("That is not a number you fool!");
+        input.nextLine();
       }
     }
 
