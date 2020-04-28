@@ -12,8 +12,11 @@ public class main {
 		System.out.println("What do you want the length to be?: (Enter a number 1-50)");
 		int length = input.nextInt();
 		
+		input.nextLine(); //to rpevent scanner from skipping input
+		
 		System.out.println("Do you want to include letters?: (y/n)");
 		String letters = input.nextLine();
+		
 		System.out.println();
 		
 		System.out.println("Do you want to include numbers?: (y/n)");
@@ -41,9 +44,13 @@ public class main {
 		
 		if(let || num || sym) {
 			generator pass = new generator(length, let, num, sym);
+			System.out.println(pass.password);
+		}
+		else {
+		  System.out.println("You chose not to add any types of characters");
 		}
 		
-		System.out.println(); //pass.toString
+
 		
 	}
 
